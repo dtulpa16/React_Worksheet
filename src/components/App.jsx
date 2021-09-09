@@ -35,20 +35,8 @@ class App extends Component{
                         secondaryAbility: 'Shoots web'
                     }
                 ],
-            jokesFromApi: []
         }
     }
-
-    // componentDidMount(){
-    //     this.getJokes()
-    // }
-    
-    // async getJokes(){
-    //     let response = await axios.get('https://v2.jokeapi.dev/joke/Programming?type=twopart&amount=5')
-    //     this.setState({
-    //         jokesFromApi: response.data.jokes
-    //     })
-    // }
 
     alertButton = () => {
         alert('devCodeCamp')
@@ -65,11 +53,11 @@ class App extends Component{
     render(){
         return(
             <React.Fragment>
-            <NameDisplay first = {this.state.firstName} last = {this.state.lastName}/>
-            <NameList name = {this.state.names}/>
-            <AlertUser alert = {this.alertButton}/>
-            <Superheroes hero = {this.state.superheroes}/>
-            <SuperheroCreateForm createHero = {this.createHero}/>
+            <NameDisplay first = {this.state.firstName} last = {this.state.lastName}/><br/><hr/>
+            <NameList name = {this.state.names}/><br/><hr/>
+            <AlertUser alert = {this.alertButton}/><br/><hr/>
+            <Superheroes hero = {this.state.superheroes}/><br/><hr/>
+            <SuperheroCreateForm createHero = {this.createHero}/><br /><hr/>
             <Joke/>
             </React.Fragment>
         )
